@@ -937,6 +937,7 @@ button.loading .loading-indicator {
 }
 
 /* Enhanced Footer */
+/* Enhanced Footer Styles with Amor Marketing Logo */
 footer {
     margin-top: 2rem;
     padding: 2rem 8%;
@@ -956,6 +957,76 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    position: relative; /* Added for positioning */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Amor Marketing Logo Styling */
+.footer-amor-marketing {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-amor-marketing a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.footer-amor-marketing a:hover {
+    transform: scale(1.05);
+}
+
+.footer-amor-marketing a:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+.amor-logo {
+    max-width: 200px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.footer-amor-marketing a:hover .amor-logo {
+    opacity: 1;
+}
+
+/* Responsive adjustments for the footer */
+@media (max-width: 900px) {
+    .footer-amor-marketing {
+        position: relative;
+        margin-bottom: 1.5rem;
+        left: auto;
+        top: auto;
+    }
+    
+    .amor-logo {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .amor-logo {
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        gap: 0.8rem;
+    }
+    
+    .amor-logo {
+        max-width: 140px;
+    }
 }
 
 .footer-brand {
