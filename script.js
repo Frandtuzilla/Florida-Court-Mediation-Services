@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     enhanceAccessibility();
     initTypingEffect();
     initializeServiceItems();
+    initBioModal();
 });
 
 /**
@@ -731,5 +732,44 @@ function enhanceAccessibility() {
         el.addEventListener('keyup', () => {
             el.classList.remove('keyboard-focus');
         });
+    });
+}
+
+/**
+ * Initialize bio modal functionality
+ */
+function initBioModal() {
+    const modal = document.getElementById('bio-modal');
+    const btn = document.getElementById('view-full-bio');
+    const closeBtn = document.querySelector('.modal-close');
+    
+    if (!modal || !btn || !closeBtn) return;
+    
+    // Open modal
+    btn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+    
+    // Close modal with X button
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
     });
 }
