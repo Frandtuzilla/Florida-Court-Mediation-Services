@@ -251,11 +251,11 @@ header, .content-wrapper {
 
 /* Enhanced Header with Centered Logo */
 header {
-    padding: 1rem 5%;
+    padding: 1.5rem 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90px;
+    min-height: 120px;
     background: linear-gradient(
         to bottom,
         rgba(23, 36, 62, 0.9),
@@ -283,7 +283,7 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 80px;
     width: auto;
     filter: brightness(0) saturate(100%) invert(93%) sepia(8%) saturate(209%) hue-rotate(358deg) brightness(103%) contrast(94%);
     transition: all 0.4s ease;
@@ -1152,7 +1152,7 @@ footer {
     
     header {
         padding: 0.8rem 4%;
-        min-height: 80px;
+        min-height: 100px;
     }
     
     .header-container {
@@ -1182,7 +1182,7 @@ footer {
     }
 
     .logo {
-        height: 40px;
+        height: 60px;
     }
 
     /* Centers text on mobile */
@@ -1231,11 +1231,11 @@ footer {
 @media (max-width: 480px) {
     header {
         padding: 0.7rem 3%;
-        min-height: 70px;
+        min-height: 90px;
     }
     
     .logo {
-        height: 35px;
+        height: 50px;
     }
     
     .glass-panel {
@@ -1419,10 +1419,6 @@ footer {
 .modal-close:hover {
     color: var(--accent-color);
     transform: scale(1.1);
-}
-
-.modal-body {
-    margin-top: 1.5rem;
 }
 
 .modal-body h3 {
