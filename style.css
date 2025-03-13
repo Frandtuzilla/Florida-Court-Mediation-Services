@@ -232,7 +232,7 @@ header, .content-wrapper {
 
 /* WebP support */
 .webp .bg-pattern {
-    background-image: url('images/Asset5@1920x.webp');
+    background-image: url('graphics/TramaFCMSLogoproposal.png');
 }
 
 .bg-pattern::after {
